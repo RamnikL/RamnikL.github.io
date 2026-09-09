@@ -6,265 +6,59 @@
 <title>Ramnik — Electrical Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #F7F7F4;
-    --surface: #FFFFFF;
-    --ink: #14181F;
-    --muted: #5B6270;
-    --accent: #C1440E;
-    --line: #DEDCD5;
-    --mono: 'JetBrains Mono', monospace;
-    --sans: 'Inter', sans-serif;
-    --display: 'Space Grotesk', sans-serif;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    line-height: 1.6;
-  }
-
-  a { color: inherit; }
-
-  .wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  header.hero {
-    padding: 96px 0 64px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .tag {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--accent);
-    margin: 0 0 16px;
-  }
-
-  h1 {
-    font-family: var(--display);
-    font-size: clamp(36px, 6vw, 52px);
-    font-weight: 700;
-    margin: 0 0 20px;
-    letter-spacing: -0.01em;
-  }
-
-  .lede {
-    font-size: 18px;
-    color: var(--muted);
-    max-width: 56ch;
-    margin: 0 0 28px;
-  }
-
-  .links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .links a {
-    font-family: var(--mono);
-    font-size: 14px;
-    text-decoration: none;
-    border-bottom: 1px solid var(--ink);
-    padding-bottom: 2px;
-  }
-
-  .links a:hover { border-color: var(--accent); color: var(--accent); }
-
-  section {
-    padding: 56px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  section:last-of-type { border-bottom: none; }
-
-  h2 {
-    font-family: var(--display);
-    font-size: 22px;
-    font-weight: 700;
-    margin: 0 0 36px;
-  }
-
-  .project {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 24px;
-    padding: 28px 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .project:first-of-type { border-top: none; padding-top: 0; }
-
-  .project .num {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--muted);
-    padding-top: 4px;
-  }
-
-  .project h3 {
-    font-family: var(--display);
-    font-size: 19px;
-    font-weight: 500;
-    margin: 0 0 8px;
-  }
-
-  .project p {
-    margin: 0 0 12px;
-    color: var(--muted);
-    font-size: 15px;
-  }
-
-  .stack {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .stack span {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--accent);
-    background: rgba(193, 68, 14, 0.08);
-    padding: 3px 8px;
-    border-radius: 3px;
-  }
-
-  .about p {
-    max-width: 62ch;
-    color: var(--ink);
-    font-size: 16px;
-  }
-
-  footer {
-    padding: 48px 0 80px;
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--muted);
-  }
-
-  footer a {
-    text-decoration: none;
-    border-bottom: 1px solid var(--muted);
-  }
-
-  footer a:hover { color: var(--accent); border-color: var(--accent); }
-
-  @media (max-width: 560px) {
-    .project { grid-template-columns: 1fr; gap: 6px; }
-    header.hero { padding: 64px 0 48px; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Ramnik</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="nav-social">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">Resume</a>
+    </div>
+  </div>
+</nav>
 
 <div class="wrap">
 
   <header class="hero">
     <p class="tag">Electrical Engineering — Toronto Metropolitan University</p>
-    <h1>Ramnik Lidhar</h1>
+    <h1>Ramnik</h1>
     <p class="lede">
       Third-year EE student working across embedded systems, analog electronics,
       and digital logic design. I like building things that solve problems I
       actually have.
     </p>
-    <div class="links">
-      <a href="mailto:youremail@example.com">Email</a>
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Resume (PDF)</a>
+    <div class="hero-links">
+      <a href="projects.html">View Projects</a>
+      <a href="about.html">About Me</a>
+    </div>
+
+    <div class="trace">
+      <svg viewBox="0 0 700 60" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 30 H120 L140 10 L160 50 L180 10 L200 30 H320 L340 50 L360 10 L380 30 H700"
+              fill="none" stroke="#C1440E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="120" cy="30" r="3.5" fill="#C1440E"/>
+        <circle cx="380" cy="30" r="3.5" fill="#C1440E"/>
+      </svg>
     </div>
   </header>
 
-  <section class="about">
-    <h2>About</h2>
-    <p>
-      I'm currently building toward co-op applications, with coursework and
-      side projects spanning FPGA design, analog circuit design, and embedded
-      firmware. Below is a running log of the things I've built.
-    </p>
-  </section>
-
-  <section class="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <div class="num">01</div>
-      <div>
-        <h3>NFC-Locked Alarm Clock</h3>
-        <p>
-          An ESP32-based alarm clock that won't shut off until you scan an
-          NFC card — built to actually solve my own problem of sleeping
-          through alarms. Handles NFC reading, RTC timekeeping, an OLED
-          display, and a button-driven menu for setting alarms.
-        </p>
-        <div class="stack">
-          <span>ESP32</span><span>C++</span><span>PN532 / NFC</span><span>I2C</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="num">02</div>
-      <div>
-        <h3>FPGA ALU Design</h3>
-        <p>
-          Arithmetic logic unit designed in VHDL and implemented in Quartus
-          II as part of digital logic coursework — covers instruction
-          decoding, arithmetic/logic operation select, and testbench
-          verification.
-        </p>
-        <div class="stack">
-          <span>VHDL</span><span>Quartus II</span><span>FPGA</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="num">03</div>
-      <div>
-        <h3>Multi-Stage MOSFET Amplifier</h3>
-        <p>
-          Analog electronics project designing and analyzing a multi-stage
-          MOSFET amplifier, covering biasing, gain stages, and frequency
-          response.
-        </p>
-        <div class="stack">
-          <span>Analog Design</span><span>MOSFET</span><span>SPICE</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="num">04</div>
-      <div>
-        <h3>Assistive Mobility Device Redesign</h3>
-        <p>
-          Team-based redesign of an assistive mobility device, focused on
-          improving usability and function for the end user.
-        </p>
-        <div class="stack">
-          <span>Design</span><span>Team Project</span>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Ramnik. Built with HTML/CSS — <a href="#">source on GitHub</a>.</p>
-  </footer>
-
 </div>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Ramnik. Built with HTML/CSS — <a href="#">source on GitHub</a>.</p>
+  </div>
+</footer>
 
 </body>
 </html>

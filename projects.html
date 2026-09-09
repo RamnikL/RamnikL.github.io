@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Ramnik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Ramnik</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+    </div>
+    <div class="nav-social">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="page-header">
+    <p class="tag">Projects</p>
+    <h1>Things I've built</h1>
+  </header>
+
+  <section class="projects">
+
+    <div class="project">
+      <div class="num">01</div>
+      <div>
+        <h3>NFC-Locked Alarm Clock</h3>
+        <p>
+          An ESP32-based alarm clock that won't shut off until you scan an
+          NFC card — built to actually solve my own problem of sleeping
+          through alarms. Handles NFC reading, RTC timekeeping, an OLED
+          display, and a button-driven menu for setting alarms.
+        </p>
+        <!-- Once you have a photo, replace the div below with:
+             <img src="images/alarm-clock.jpg" alt="NFC alarm clock prototype on a desk"> -->
+        <div class="img-slot">drop a photo in /images and swap this slot for an &lt;img&gt; tag</div>
+        <div class="stack">
+          <span>ESP32</span><span>C++</span><span>PN532 / NFC</span><span>I2C</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="num">02</div>
+      <div>
+        <h3>FPGA ALU Design</h3>
+        <p>
+          Arithmetic logic unit designed in VHDL and implemented in Quartus
+          II as part of digital logic coursework — covers instruction
+          decoding, arithmetic/logic operation select, and testbench
+          verification.
+        </p>
+        <div class="img-slot">drop a photo/screenshot in /images and swap this slot for an &lt;img&gt; tag</div>
+        <div class="stack">
+          <span>VHDL</span><span>Quartus II</span><span>FPGA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="num">03</div>
+      <div>
+        <h3>Multi-Stage MOSFET Amplifier</h3>
+        <p>
+          Analog electronics project designing and analyzing a multi-stage
+          MOSFET amplifier, covering biasing, gain stages, and frequency
+          response.
+        </p>
+        <div class="img-slot">drop a schematic/photo in /images and swap this slot for an &lt;img&gt; tag</div>
+        <div class="stack">
+          <span>Analog Design</span><span>MOSFET</span><span>SPICE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="num">04</div>
+      <div>
+        <h3>Assistive Mobility Device Redesign</h3>
+        <p>
+          Team-based redesign of an assistive mobility device, focused on
+          improving usability and function for the end user.
+        </p>
+        <div class="img-slot">drop a photo in /images and swap this slot for an &lt;img&gt; tag</div>
+        <div class="stack">
+          <span>Design</span><span>Team Project</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Ramnik. Built with HTML/CSS — <a href="#">source on GitHub</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
