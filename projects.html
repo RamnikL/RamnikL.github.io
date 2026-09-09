@@ -5,14 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects — Ramnik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="site-nav">
   <div class="wrap">
-    <a class="brand" href="index.html">Ramnik</a>
+    <a class="brand" href="index.html">
+      <svg class="grass-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+        <rect width="16" height="16" fill="#8B5A2B"/>
+        <rect y="0" width="16" height="5" fill="#5D8A3A"/>
+        <rect y="4" width="16" height="1" fill="#3F6027"/>
+        <rect x="1" y="0" width="2" height="1" fill="#7CB253"/>
+        <rect x="6" y="0" width="2" height="1" fill="#7CB253"/>
+        <rect x="11" y="0" width="2" height="1" fill="#7CB253"/>
+        <rect x="2" y="7" width="2" height="2" fill="#6B431E"/>
+        <rect x="9" y="10" width="2" height="2" fill="#6B431E"/>
+        <rect x="12" y="6" width="2" height="2" fill="#6B431E"/>
+      </svg>
+      <span class="brand-text">RAMNIK</span>
+    </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -30,76 +43,68 @@
 <div class="wrap">
 
   <header class="page-header">
-    <p class="tag">Projects</p>
-    <h1>Things I've built</h1>
+    <p class="tag">[ INVENTORY ]</p>
+    <h1>PROJECTS</h1>
   </header>
 
   <section class="projects">
 
-    <div class="project">
-      <div class="num">01</div>
-      <div>
-        <h3>NFC-Locked Alarm Clock</h3>
-        <p>
-          An ESP32-based alarm clock that won't shut off until you scan an
-          NFC card — built to actually solve my own problem of sleeping
-          through alarms. Handles NFC reading, RTC timekeeping, an OLED
-          display, and a button-driven menu for setting alarms.
-        </p>
-        <!-- Once you have a photo, replace the div below with:
-             <img src="images/alarm-clock.jpg" alt="NFC alarm clock prototype on a desk"> -->
-        <div class="img-slot">drop a photo in /images and swap this slot for an &lt;img&gt; tag</div>
-        <div class="stack">
-          <span>ESP32</span><span>C++</span><span>PN532 / NFC</span><span>I2C</span>
-        </div>
+    <div class="project pixel-box">
+      <span class="num">ITEM 01</span>
+      <h3>NFC-Locked Alarm Clock</h3>
+      <p>
+        An ESP32-based alarm clock that won't shut off until you scan an
+        NFC card — built to actually solve my own problem of sleeping
+        through alarms. Handles NFC reading, RTC timekeeping, an OLED
+        display, and a button-driven menu for setting alarms.
+      </p>
+      <!-- Once you have a photo, replace the div below with:
+           <img src="images/alarm-clock.jpg" alt="NFC alarm clock prototype on a desk"> -->
+      <div class="img-slot">EMPTY SLOT<br>drop a photo in /images</div>
+      <div class="stack">
+        <span>ESP32</span><span>C++</span><span>PN532 / NFC</span><span>I2C</span>
       </div>
     </div>
 
-    <div class="project">
-      <div class="num">02</div>
-      <div>
-        <h3>FPGA ALU Design</h3>
-        <p>
-          Arithmetic logic unit designed in VHDL and implemented in Quartus
-          II as part of digital logic coursework — covers instruction
-          decoding, arithmetic/logic operation select, and testbench
-          verification.
-        </p>
-        <div class="img-slot">drop a photo/screenshot in /images and swap this slot for an &lt;img&gt; tag</div>
-        <div class="stack">
-          <span>VHDL</span><span>Quartus II</span><span>FPGA</span>
-        </div>
+    <div class="project pixel-box">
+      <span class="num">ITEM 02</span>
+      <h3>FPGA ALU Design</h3>
+      <p>
+        Arithmetic logic unit designed in VHDL and implemented in Quartus
+        II as part of digital logic coursework — covers instruction
+        decoding, arithmetic/logic operation select, and testbench
+        verification.
+      </p>
+      <div class="img-slot">EMPTY SLOT<br>drop a screenshot in /images</div>
+      <div class="stack">
+        <span>VHDL</span><span>Quartus II</span><span>FPGA</span>
       </div>
     </div>
 
-    <div class="project">
-      <div class="num">03</div>
-      <div>
-        <h3>Multi-Stage MOSFET Amplifier</h3>
-        <p>
-          Analog electronics project designing and analyzing a multi-stage
-          MOSFET amplifier, covering biasing, gain stages, and frequency
-          response.
-        </p>
-        <div class="img-slot">drop a schematic/photo in /images and swap this slot for an &lt;img&gt; tag</div>
-        <div class="stack">
-          <span>Analog Design</span><span>MOSFET</span><span>SPICE</span>
-        </div>
+    <div class="project pixel-box">
+      <span class="num">ITEM 03</span>
+      <h3>Multi-Stage MOSFET Amplifier</h3>
+      <p>
+        Analog electronics project designing and analyzing a multi-stage
+        MOSFET amplifier, covering biasing, gain stages, and frequency
+        response.
+      </p>
+      <div class="img-slot">EMPTY SLOT<br>drop a schematic in /images</div>
+      <div class="stack">
+        <span>Analog Design</span><span>MOSFET</span><span>SPICE</span>
       </div>
     </div>
 
-    <div class="project">
-      <div class="num">04</div>
-      <div>
-        <h3>Assistive Mobility Device Redesign</h3>
-        <p>
-          Team-based redesign of an assistive mobility device, focused on
-          improving usability and function for the end user.
-        </p>
-        <div class="img-slot">drop a photo in /images and swap this slot for an &lt;img&gt; tag</div>
-        <div class="stack">
-          <span>Design</span><span>Team Project</span>
-        </div>
+    <div class="project pixel-box">
+      <span class="num">ITEM 04</span>
+      <h3>Assistive Mobility Device Redesign</h3>
+      <p>
+        Team-based redesign of an assistive mobility device, focused on
+        improving usability and function for the end user.
+      </p>
+      <div class="img-slot">EMPTY SLOT<br>drop a photo in /images</div>
+      <div class="stack">
+        <span>Design</span><span>Team Project</span>
       </div>
     </div>
 

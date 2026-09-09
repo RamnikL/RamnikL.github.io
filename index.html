@@ -5,14 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ramnik — Electrical Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="site-nav">
   <div class="wrap">
-    <a class="brand" href="index.html">Ramnik</a>
+    <a class="brand" href="index.html">
+      <svg class="grass-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+        <rect width="16" height="16" fill="#8B5A2B"/>
+        <rect y="0" width="16" height="5" fill="#5D8A3A"/>
+        <rect y="4" width="16" height="1" fill="#3F6027"/>
+        <rect x="1" y="0" width="2" height="1" fill="#7CB253"/>
+        <rect x="6" y="0" width="2" height="1" fill="#7CB253"/>
+        <rect x="11" y="0" width="2" height="1" fill="#7CB253"/>
+        <rect x="2" y="7" width="2" height="2" fill="#6B431E"/>
+        <rect x="9" y="10" width="2" height="2" fill="#6B431E"/>
+        <rect x="12" y="6" width="2" height="2" fill="#6B431E"/>
+      </svg>
+      <span class="brand-text">RAMNIK</span>
+    </a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -30,25 +43,29 @@
 <div class="wrap">
 
   <header class="hero">
-    <p class="tag">Electrical Engineering — Toronto Metropolitan University</p>
-    <h1>Ramnik</h1>
+    <p class="tag">[ SPAWN POINT ]</p>
+    <h1>RAMNIK</h1>
     <p class="lede">
-      Third-year EE student working across embedded systems, analog electronics,
-      and digital logic design. I like building things that solve problems I
-      actually have.
+      Third-year Electrical Engineering student at TMU. I build embedded
+      systems, analog circuits, and digital logic projects — mostly things
+      that solve problems I actually have.
     </p>
     <div class="hero-links">
       <a href="projects.html">View Projects</a>
-      <a href="about.html">About Me</a>
+      <a href="about.html" class="secondary">About Me</a>
     </div>
 
-    <div class="trace">
-      <svg viewBox="0 0 700 60" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 30 H120 L140 10 L160 50 L180 10 L200 30 H320 L340 50 L360 10 L380 30 H700"
-              fill="none" stroke="#C1440E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="120" cy="30" r="3.5" fill="#C1440E"/>
-        <circle cx="380" cy="30" r="3.5" fill="#C1440E"/>
-      </svg>
+    <p class="hotbar-label">// equipped skills</p>
+    <div class="hotbar">
+      <div class="slot">ESP32</div>
+      <div class="slot">VHDL</div>
+      <div class="slot">Quartus II</div>
+      <div class="slot">C++</div>
+      <div class="slot">Analog<br>Design</div>
+      <div class="slot">MOSFET</div>
+      <div class="slot">SPICE</div>
+      <div class="slot">I2C</div>
+      <div class="slot">CAD</div>
     </div>
   </header>
 
