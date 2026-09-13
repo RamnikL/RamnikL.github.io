@@ -376,3 +376,127 @@ footer a {
 }
 
 footer a:hover { color: var(--dirt-dark); }
+
+/* ============ v3: richer aesthetic ============ */
+
+nav.site-nav {
+  background: var(--stone);
+  border-bottom: 4px solid var(--ink);
+}
+
+nav.site-nav .brand-text { color: var(--ink); }
+nav.site-nav .nav-links a { background: transparent; }
+nav.site-nav .nav-links a:hover,
+nav.site-nav .nav-links a.active {
+  background: var(--surface);
+}
+
+/* ---- Hero scene ---- */
+.hero-scene {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: linear-gradient(#8FD3F4 0%, #C9EBFA 70%, #E4F5FC 100%);
+  border-bottom: 4px solid var(--ink);
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  opacity: 0.9;
+  box-shadow: 16px 0 0 #fff, 32px 0 0 #fff, 8px -8px 0 #fff, 24px -8px 0 #fff;
+}
+
+.terrain {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-panel {
+  position: relative;
+  margin-top: -92px;
+  padding: 24px 24px 28px;
+  background: var(--surface);
+  border: 4px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+header.hero { padding: 0 0 56px; }
+
+.tag {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 10px;
+  border: 2px solid var(--ink);
+}
+
+.hero-links a {
+  box-shadow:
+    inset -3px -3px 0 rgba(0,0,0,0.28),
+    inset 3px 3px 0 rgba(255,255,255,0.35),
+    4px 4px 0 var(--ink);
+}
+
+.hero-links a.secondary {
+  box-shadow:
+    inset -3px -3px 0 rgba(0,0,0,0.12),
+    inset 3px 3px 0 rgba(255,255,255,0.6),
+    4px 4px 0 var(--ink);
+}
+
+.hero-links a:active {
+  box-shadow:
+    inset 3px 3px 0 rgba(0,0,0,0.28),
+    2px 2px 0 var(--ink);
+  transform: translate(2px, 2px);
+}
+
+/* ---- block-strip divider ---- */
+.block-divider {
+  height: 12px;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent) 0 24px,
+    var(--accent-dark) 24px 27px,
+    var(--dirt) 27px 51px,
+    var(--dirt-dark) 51px 54px
+  );
+}
+
+/* ---- checkered item-slot texture ---- */
+.project.pixel-box {
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(45deg, rgba(0,0,0,0.035) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0,0,0,0.035) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.035) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.035) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+.grass-icon { transition: transform 0.1s ease; }
+.brand:hover .grass-icon { transform: translateY(-2px); }
+
+.hotbar-wrap {
+  display: inline-block;
+  padding: 10px;
+  background: var(--dirt);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.slot {
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0,0,0,0.05) 25%, transparent 25%);
+  background-size: 8px 8px;
+}
