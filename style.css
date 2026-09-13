@@ -470,33 +470,54 @@ header.hero { padding: 0 0 56px; }
   );
 }
 
-/* ---- checkered item-slot texture ---- */
+/* ---- checkered item-slot texture (removed — read as "missing image") ---- */
 .project.pixel-box {
-  background-color: var(--surface);
-  background-image:
-    linear-gradient(45deg, rgba(0,0,0,0.035) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(0,0,0,0.035) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.035) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.035) 75%);
-  background-size: 16px 16px;
-  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  background: var(--surface);
+  border-left: 6px solid var(--accent);
 }
 
 .grass-icon { transition: transform 0.1s ease; }
 .brand:hover .grass-icon { transform: translateY(-2px); }
 
-.hotbar-wrap {
-  display: inline-block;
-  padding: 10px;
-  background: var(--dirt);
-  border: 3px solid var(--ink);
-  box-shadow: 4px 4px 0 var(--ink);
+/* ---- home page menu ---- */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
 }
 
-.slot {
-  background-color: var(--surface);
-  background-image:
-    linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(0,0,0,0.05) 25%, transparent 25%);
-  background-size: 8px 8px;
+.menu a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 26px;
+  background: var(--surface);
+  border: 3px solid var(--ink);
+  box-shadow:
+    inset -3px -3px 0 rgba(0,0,0,0.15),
+    inset 3px 3px 0 rgba(255,255,255,0.5),
+    5px 5px 0 var(--ink);
+  font-family: var(--pixel);
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.05s ease;
+}
+
+.menu a .arrow {
+  font-family: var(--mono);
+  font-size: 18px;
+}
+
+.menu a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.menu a:active {
+  box-shadow:
+    inset 3px 3px 0 rgba(0,0,0,0.28),
+    2px 2px 0 var(--ink);
+  transform: translate(3px, 3px);
 }
