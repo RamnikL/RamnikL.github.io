@@ -115,11 +115,32 @@
 
 </div>
 
+<div id="lightbox" class="lightbox-overlay">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <footer>
   <div class="wrap">
     <p>&copy; 2026 Ramnik. Built with HTML/CSS — <a href="#">source on GitHub</a>.</p>
   </div>
 </footer>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.zoomable').forEach(function (img) {
+    img.addEventListener('click', function () {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', function () {
+    lightbox.classList.remove('active');
+  });
+</script>
 
 </body>
 </html>
