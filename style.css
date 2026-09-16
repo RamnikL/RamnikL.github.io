@@ -521,3 +521,32 @@ header.hero { padding: 0 0 56px; }
     2px 2px 0 var(--ink);
   transform: translate(3px, 3px);
 }
+
+
+/* ---- lightbox (click to enlarge) ---- */
+.project img.zoomable {
+  cursor: zoom-in;
+}
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 8, 0.88);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.4);
+}
