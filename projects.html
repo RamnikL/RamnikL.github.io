@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects — Ramnik</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%238B5A2B'/%3E%3Crect width='16' height='5' fill='%235D8A3A'/%3E%3Crect y='4' width='16' height='1' fill='%233F6027'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');try{if(!sessionStorage.getItem('world-loaded')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('first-load');}catch(e){}</script>
 </head>
-<body>
+<body data-time="night" data-trees="right">
 
 <nav class="site-nav">
   <div class="wrap">
@@ -40,80 +42,119 @@
   </div>
 </nav>
 
-<div class="wrap">
+<header class="scene">
+  <div class="sky" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="celestial moon"></div>
+    <div class="clouds"></div>
+    <canvas class="hills"></canvas>
+    <canvas class="terrain"></canvas>
+    <div class="fireflies"></div>
+  </div>
 
-  <header class="page-header">
+  <div class="wrap scene-content page-header">
     <p class="tag">[ INVENTORY ]</p>
-    <h1>PROJECTS</h1>
-  </header>
-</div>
-<div class="block-divider"></div>
-<div class="wrap">
-  <section class="projects">
+    <h1 class="title">PROJECTS</h1>
+  </div>
 
-    <div class="project pixel-box">
-      <span class="num">ITEM 01</span>
-      <h3>NFC-Locked Alarm Clock</h3>
-      <p>
-        An ESP32-based alarm clock that won't shut off until you scan an
-        NFC card built to actually solve my own problem of snoozing
-        alarms on repeat. Handles NFC reading, RTC timekeeping, an OLED
-        display, and a button-driven menu for setting alarms.
-      </p>
-      <img src="images/alarm-clock-example.png" alt="Pixel-art icon of the NFC alarm clock prototype" class="zoomable">
-      <!-- This is a placeholder pixel-art icon so you can see how the <img> tag
-           and sizing work. Swap the src above for a real photo, e.g.:
-           <img src="images/alarm-clock.jpg" alt="NFC alarm clock prototype on a desk"> -->
-      <div class="stack">
-        <span>ESP32</span><span>C++</span><span>PN532 / NFC</span><span>I2C</span>
+  <span class="time-badge" aria-hidden="true">&#9790; NIGHT 1 &middot; 23:00</span>
+</header>
+
+<main class="underground underground--deep">
+  <div class="wrap wrap--wide">
+    <section class="projects">
+
+      <div class="project gui reveal">
+        <div class="project-body">
+          <div class="project-head">
+            <span class="slot"><i class="px-icon" data-icon="clock"></i></span>
+            <span class="num">ITEM 01</span>
+          </div>
+          <h3>NFC-Locked Alarm Clock</h3>
+          <p>
+            An ESP32-based alarm clock that won't shut off until you scan an
+            NFC card built to actually solve my own problem of snoozing
+            alarms on repeat. Handles NFC reading, RTC timekeeping, an OLED
+            display, and a button-driven menu for setting alarms.
+          </p>
+          <div class="stack">
+            <span>ESP32</span><span>C++</span><span>PN532 / NFC</span><span>I2C</span>
+          </div>
+        </div>
+        <div class="item-frame">
+          <img src="images/alarm-clock-example.png" alt="Pixel-art icon of the NFC alarm clock prototype" class="zoomable">
+          <!-- This is a placeholder pixel-art icon so you can see how the <img> tag
+               and sizing work. Swap the src above for a real photo, e.g.:
+               <img src="images/alarm-clock.jpg" alt="NFC alarm clock prototype on a desk"> -->
+        </div>
       </div>
-    </div>
 
-    <div class="project pixel-box">
-      <span class="num">ITEM 02</span>
-      <h3>FPGA ALU Design</h3>
-      <p>
-        Arithmetic logic unit designed in VHDL and implemented in Quartus
-        II as part of digital logic coursework — covers instruction
-        decoding, arithmetic/logic operation select, and testbench
-        verification.
-      </p>
-      <img src="images/general-processor.png" alt="Image of the processor in Quartus" class="zoomable">
-      <div class="stack">
-        <span>VHDL</span><span>Quartus II</span><span>FPGA</span>
+      <div class="project gui reveal">
+        <div class="project-body">
+          <div class="project-head">
+            <span class="slot"><i class="px-icon" data-icon="chip"></i></span>
+            <span class="num">ITEM 02</span>
+          </div>
+          <h3>FPGA ALU Design</h3>
+          <p>
+            Arithmetic logic unit designed in VHDL and implemented in Quartus
+            II as part of digital logic coursework — covers instruction
+            decoding, arithmetic/logic operation select, and testbench
+            verification.
+          </p>
+          <div class="stack">
+            <span>VHDL</span><span>Quartus II</span><span>FPGA</span>
+          </div>
+        </div>
+        <div class="item-frame">
+          <img src="images/general-processor.png" alt="Image of the processor in Quartus" class="zoomable">
+        </div>
       </div>
-    </div>
 
-    <div class="project pixel-box">
-      <span class="num">ITEM 03</span>
-      <h3>Multi-Stage MOSFET Amplifier</h3>
-      <p>
-        Analog electronics project designing and analyzing a multi-stage
-        MOSFET amplifier, covering biasing, gain stages, and frequency
-        response.
-      </p>
-      <img src="images/mosfet-amp.png" alt="Multi-stage MOSFET amplifier circuit on KiCad" class="zoomable">
-      <div class="stack">
-        <span>Analog Design</span><span>MOSFET</span><span>SPICE</span>
+      <div class="project gui reveal">
+        <div class="project-body">
+          <div class="project-head">
+            <span class="slot"><i class="px-icon" data-icon="torch"></i></span>
+            <span class="num">ITEM 03</span>
+          </div>
+          <h3>Multi-Stage MOSFET Amplifier</h3>
+          <p>
+            Analog electronics project designing and analyzing a multi-stage
+            MOSFET amplifier, covering biasing, gain stages, and frequency
+            response.
+          </p>
+          <div class="stack">
+            <span>Analog Design</span><span>MOSFET</span><span>SPICE</span>
+          </div>
+        </div>
+        <div class="item-frame">
+          <img src="images/mosfet-amp.png" alt="Multi-stage MOSFET amplifier circuit on KiCad" class="zoomable">
+        </div>
       </div>
-    </div>
 
-    <div class="project pixel-box">
-      <span class="num">ITEM 04</span>
-      <h3>Assistive Mobility Device Redesign</h3>
-      <p>
-        Team-based redesign of an assistive mobility device, focused on
-        improving usability and function for the end user.
-      </p>
-      <img src="images/assistive-chair.png" alt="Assistive mobility device for the elderly" class="zoomable">
-      <div class="stack">
-        <span>Design</span><span>Team Project</span>
+      <div class="project gui reveal">
+        <div class="project-body">
+          <div class="project-head">
+            <span class="slot"><i class="px-icon" data-icon="minecart"></i></span>
+            <span class="num">ITEM 04</span>
+          </div>
+          <h3>Assistive Mobility Device Redesign</h3>
+          <p>
+            Team-based redesign of an assistive mobility device, focused on
+            improving usability and function for the end user.
+          </p>
+          <div class="stack">
+            <span>Design</span><span>Team Project</span>
+          </div>
+        </div>
+        <div class="item-frame">
+          <img src="images/assistive-chair.png" alt="Assistive mobility device for the elderly" class="zoomable">
+        </div>
       </div>
-    </div>
 
-  </section>
-
-</div>
+    </section>
+  </div>
+</main>
 
 <div id="lightbox" class="lightbox-overlay">
   <img id="lightbox-img" src="" alt="">
@@ -125,22 +166,6 @@
   </div>
 </footer>
 
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-
-  document.querySelectorAll('.zoomable').forEach(function (img) {
-    img.addEventListener('click', function () {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightbox.classList.add('active');
-    });
-  });
-
-  lightbox.addEventListener('click', function () {
-    lightbox.classList.remove('active');
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

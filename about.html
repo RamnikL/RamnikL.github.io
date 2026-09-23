@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Ramnik</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%238B5A2B'/%3E%3Crect width='16' height='5' fill='%235D8A3A'/%3E%3Crect y='4' width='16' height='1' fill='%233F6027'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');try{if(!sessionStorage.getItem('world-loaded')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('first-load');}catch(e){}</script>
 </head>
-<body>
+<body data-time="dusk" data-trees="right">
 
 <nav class="site-nav">
   <div class="wrap">
@@ -40,58 +42,87 @@
   </div>
 </nav>
 
-<div class="wrap">
+<header class="scene">
+  <div class="sky" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="celestial sun"></div>
+    <div class="clouds"></div>
+    <canvas class="hills"></canvas>
+    <canvas class="terrain"></canvas>
+  </div>
 
-  <header class="page-header">
+  <div class="wrap scene-content page-header">
     <p class="tag">[ CHARACTER INFO ]</p>
-    <h1>ABOUT</h1>
-  </header>
-</div>
-<div class="block-divider"></div>
-<div class="wrap">
-  <section class="about">
-    <p class="about-lead">
-      I'm a third-year Electrical Engineering student at Toronto Metropolitan
-      University, and I like taking things apart (sometimes literally) to
-      understand how they work.
-    </p>
-    <p>
-      As you can tell from this website, I am a pretty big fan of video games and
-      have been playing them since I was young. Unfortunately I haven't had much time 
-      to play them as of late as my focus right now is to find a co-op position in this 
-      ever unstable job market while also trying to maintain a good GPA. The reason I 
-      went into this hellish degree can be attributed to my dad as he has always dragged 
-      me along to solve problems around the house with him ever since I was young. Luckily, 
-      it ended up building up a problem solving mindset in me, making it quite obvious why 
-      I may have ended up going for a job that requires you to solve other peoples problems.  
-    </p>
-    <p>
-      Outside of coursework I've been working on things like an ESP32-based
-      alarm clock, FPGA logic design, and analog circuit projects — you can
-      see the details on the <a href="projects.html">projects page</a>.
-    </p>
+    <h1 class="title">ABOUT</h1>
+  </div>
 
-    <div class="facts pixel-box">
-      <div>
-        <span class="label">SCHOOL</span>
-        Toronto Metropolitan University
-      </div>
-      <div>
-        <span class="label">CLASS</span>
-        Electrical Engineering, Year 3
-      </div>
-      <div>
-        <span class="label">SKILL TREE</span>
-        Embedded systems, analog design, digital logic
-      </div>
-      <div>
-        <span class="label">CURRENT QUEST</span>
-        Building a portfolio, prepping for co-op applications
-      </div>
-    </div>
-  </section>
+  <span class="time-badge" aria-hidden="true">&#9728; DAY 1 &middot; 18:30</span>
+</header>
 
-</div>
+<main class="underground">
+  <div class="wrap">
+    <section class="about">
+      <div class="book reveal">
+        <p class="about-lead">
+          I'm a third-year Electrical Engineering student at Toronto Metropolitan
+          University, and I like taking things apart (sometimes literally) to
+          understand how they work.
+        </p>
+        <p>
+          As you can tell from this website, I am a pretty big fan of video games and
+          have been playing them since I was young. Unfortunately I haven't had much time
+          to play them as of late as my focus right now is to find a co-op position in this
+          ever unstable job market while also trying to maintain a good GPA. The reason I
+          went into this hellish degree can be attributed to my dad as he has always dragged
+          me along to solve problems around the house with him ever since I was young. Luckily,
+          it ended up building up a problem solving mindset in me, making it quite obvious why
+          I may have ended up going for a job that requires you to solve other peoples problems.
+        </p>
+        <p>
+          Outside of coursework I've been working on things like an ESP32-based
+          alarm clock, FPGA logic design, and analog circuit projects — you can
+          see the details on the <a href="projects.html">projects page</a>.
+        </p>
+      </div>
+
+      <div class="facts gui reveal">
+        <div class="fact">
+          <span class="slot"><i class="px-icon" data-icon="book"></i></span>
+          <div>
+            <span class="label">SCHOOL</span>
+            Toronto Metropolitan University
+          </div>
+        </div>
+        <div class="fact">
+          <span class="slot"><i class="px-icon" data-icon="redstone"></i></span>
+          <div>
+            <span class="label">CLASS</span>
+            Electrical Engineering, Year 3
+          </div>
+        </div>
+        <div class="fact">
+          <span class="slot"><i class="px-icon" data-icon="pickaxe"></i></span>
+          <div>
+            <span class="label">SKILL TREE</span>
+            Embedded systems, analog design, digital logic
+          </div>
+        </div>
+        <div class="fact">
+          <span class="slot"><i class="px-icon" data-icon="compass"></i></span>
+          <div>
+            <span class="label">CURRENT QUEST</span>
+            Building a portfolio, prepping for co-op applications
+          </div>
+        </div>
+
+        <div class="xp" aria-hidden="true">
+          <span class="xp-level">3</span>
+          <div class="xp-bar"><span class="xp-fill"></span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
 
 <footer>
   <div class="wrap">
@@ -99,5 +130,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
