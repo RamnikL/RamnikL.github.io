@@ -567,7 +567,7 @@
   /* ---------- fade to black between pages ---------- */
 
   if (!reduceMotion) {
-    document.querySelectorAll('a[href$=".html"]:not([target])').forEach(function (a) {
+    document.querySelectorAll('a[href$=".html"]:not([target]), a[href="./"]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
         e.preventDefault();
