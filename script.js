@@ -419,13 +419,21 @@
     var text = h1.textContent;
     h1.setAttribute('aria-label', text);
     h1.textContent = '';
-    Array.prototype.forEach.call(text, function (ch, i) {
-      var span = document.createElement('span');
-      span.className = 'ch';
-      span.setAttribute('aria-hidden', 'true');
-      span.style.setProperty('--i', i);
-      span.textContent = ch;
-      h1.appendChild(span);
+    // group letters by word so long titles only wrap between words
+    var i = 0;
+    text.split(' ').forEach(function (word, w) {
+      if (w > 0) h1.appendChild(document.createTextNode(' '));
+      var wordEl = document.createElement('span');
+      wordEl.className = 'word';
+      wordEl.setAttribute('aria-hidden', 'true');
+      Array.prototype.forEach.call(word, function (ch) {
+        var span = document.createElement('span');
+        span.className = 'ch';
+        span.style.setProperty('--i', i++);
+        span.textContent = ch;
+        wordEl.appendChild(span);
+      });
+      h1.appendChild(wordEl);
     });
   });
 
