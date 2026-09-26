@@ -68,7 +68,7 @@ body {
 
 a { color: inherit; }
 
-img, canvas { image-rendering: pixelated; }
+canvas { image-rendering: pixelated; }
 
 .wrap {
   max-width: 820px;
