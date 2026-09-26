@@ -572,6 +572,10 @@ h1.title {
 
 .page-header h1.title { font-size: clamp(30px, 6vw, 52px); }
 
+.hero h1.title { font-size: clamp(28px, 6vw, 54px); }
+
+h1.title .word { white-space: nowrap; }
+
 h1.title .ch {
   display: inline-block;
   animation: block-drop 0.7s cubic-bezier(.3, 1.4, .6, 1) both;
