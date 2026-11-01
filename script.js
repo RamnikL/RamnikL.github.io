@@ -470,6 +470,10 @@
       p: { d: '#4fe3d6', D: '#1d9e94', l: '#b6fff8', s: '#7a5a2f', S: '#4a3418' },
       m: ['.ldddD..', 'd....DD.', '.....sDD', '....s..D', '...s....', '..S.....', '.S......', 'S.......']
     },
+    diamond: {
+      p: { d: '#4fe3d6', D: '#1d9e94', l: '#d6fffa' },
+      m: ['........', '..dDDd..', '.dldDDD.', 'dlldDDDD', '.dldDDD.', '..dDDD..', '...dD...', '........']
+    },
     compass: {
       p: { G: '#5a5a5a', g: '#8a8a8a', w: '#d8d8d8', r: '#e02020' },
       m: ['..GGGG..', '.GgwwgG.', 'GgwwwrwG', 'GwwwrwwG', 'GwwrwwwG', 'GwrwwwgG', '.GgwwgG.', '..GGGG..']
